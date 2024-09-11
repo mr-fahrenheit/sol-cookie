@@ -1,0 +1,25 @@
+[package]
+name = "cookie"
+version = "0.1.0"
+description = "Created with Anchor"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "cookie"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "anchor-spl/idl-build"]
+
+[dependencies]
+anchor-lang = { version = "0.30.1", features = ["interface-instructions", "init-if-needed"] }
+anchor-spl = "0.30.1"
+mpl-token-metadata = "4.1.2"
+spl-tlv-account-resolution = "0.6.3"
+spl-transfer-hook-interface = "0.6.3"
+arrayref = "0.3.6"  # Use the latest version compatible with your project
